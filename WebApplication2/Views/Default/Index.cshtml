@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("index","Default",FormMethod.Post))
+{
+<table>
+    <tr><td><label name="lval1">Value1</label></td><td><input type="text" name="val1"/></td></tr>
+    <tr><td><label name="lval1">Value2</label></td><td><input type="text" name="val2" /></td></tr>
+    <tr><td><input type="submit"/></td></tr>
+</table>
+    if (@ViewBag.Sum != null)
+    {
+         <table><tr><td><label name="lresult">Result is   </label></td><td>@ViewBag.Sum</td></tr></table>
+    }
+}
+
+
+
